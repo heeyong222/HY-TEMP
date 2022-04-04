@@ -25,8 +25,15 @@ public class NavsController {
     NavsService navsService;
 
 
+
+
     @PostMapping("/find")
     public ResponseEntity<ResultMessage> find(Map<String, Object> map){
+        LOGGER.debug(">>> API find - param : {}", map.toString());
+        ResultMessage rm = null;
+
+
+
         return new ResponseEntity<ResultMessage>(HttpStatus.OK);
     }
 
