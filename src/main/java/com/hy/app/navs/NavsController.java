@@ -1,6 +1,7 @@
 package com.hy.app.navs;
 
 import com.hy.app.entity.ResultMessage;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,10 +14,11 @@ import java.util.Map;
 
 @RestController
 @CrossOrigin
+@Slf4j
 @RequestMapping(path="/navs")
 public class NavsController {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(NavsController.class);
+    private final static Logger LOGGER = LoggerFactory.getLogger(NavsController.class);
 
     @Autowired
     NavsService navsService;
@@ -27,11 +29,13 @@ public class NavsController {
     @PostMapping("/find")
     public ResponseEntity<ResultMessage> find(@RequestBody Map<String, Object> map){
         LOGGER.debug(">>> API find - param : {}", map.toString());
+        System.out.println("!@#!@#!@#");
         ResultMessage rm = null;
 
 
 
-        return new ResponseEntity<ResultMessage>(HttpStatus.OK);
+
+        return new ResponseEntity<ResultMessage>(rm, HttpStatus.OK);
     }
 
 
