@@ -21,12 +21,12 @@ public class NavsService {
         ResultMessage rm = new ResultMessage();
         /*
         Map 파싱
-        { 123.13251, 126.12313 },
+        { R : 123.13251, C : 126.12313 },
          */
         JsonObject jo = new JsonObject();
         JsonArray ja = new JsonArray();
-//        JsonArray ja = new Gson().json
-        map.get("dests");
+        ja = (JsonArray) map.get("dests");
+        LOGGER.info(">>> 좌표 리스트 : {}");
 
 
 
