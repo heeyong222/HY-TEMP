@@ -24,10 +24,15 @@ public class NavsService {
         { R : 123.13251, C : 126.12313 },
          */
         JsonObject jo = new JsonObject();
-        JsonArray ja = new JsonArray();
-        ja = (JsonArray) map.get("dests");
-        LOGGER.info(">>> 좌표 리스트 : {}");
+        JsonArray rcArr = new JsonArray();
+        rcArr = (JsonArray) map.get("dests");
+        LOGGER.info(">>> 좌표 리스트 : {}", rcArr.toString());
 
+        for(int i = 0; i < rcArr.size(); i++){
+            JsonObject rc = rcArr.get(i).getAsJsonObject();
+
+
+        }
 
 
 
