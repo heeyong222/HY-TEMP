@@ -28,7 +28,7 @@ public class NavsController {
 
     @PostMapping("/find")
     public ResponseEntity<ResultMessage> find(@RequestBody Map<String, Object> map){
-        LOGGER.debug(">>> API find - param : {}", map.toString());
+        LOGGER.info(">>> API find - param : {}", map.toString());
         System.out.println("!@#!@#!@#");
         ResultMessage rm = null;
 
